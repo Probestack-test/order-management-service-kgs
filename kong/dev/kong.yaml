@@ -1,0 +1,86 @@
+_format_version: "3.0"
+_transform: true
+
+########################################################
+# SERVICES
+########################################################
+
+services:
+  - name: order-management-service
+    host: order-management-service-upstream
+    port: 80
+    protocol: http
+    path: /v2/api
+    retries: 5
+    connect_timeout: 60000
+    write_timeout: 60000
+    read_timeout: 60000
+    tags:
+      - env:dev
+      - team:open-banking
+      - app:order-management-service
+    routes:
+      - name: order-management-service-get-order-management-service
+        protocols:
+          - https
+          - http
+        methods:
+          - GET
+        hosts:
+          - google.com
+        paths:
+          - /v1/order-management-service
+        strip_path: true
+        preserve_host: false
+        https_redirect_status_code: 426
+        tags:
+          - env:dev
+      - name: order-management-service-post-order-management-service
+        protocols:
+          - https
+          - http
+        methods:
+          - POST
+        hosts:
+          - google.com
+        paths:
+          - /v1/order-management-service
+        strip_path: true
+        preserve_host: false
+        https_redirect_status_code: 426
+        tags:
+          - env:dev
+      - name: order-management-service-get-order-management-service-id
+        protocols:
+          - https
+          - http
+        methods:
+          - GET
+        hosts:
+          - google.com
+        paths:
+          - /v1/order-management-service/:id
+        strip_path: true
+        preserve_host: false
+        https_redirect_status_code: 426
+        tags:
+          - env:dev
+
+########################################################
+# PLUGINS
+########################################################
+
+plugins:
+  []
+
+########################################################
+# UPSTREAMS + TARGETS
+########################################################
+
+upstreams:
+  - name: order-management-service-upstream
+    algorithm: round-robin
+    slots: 10000
+    targets:
+      - target: google.com:443
+        weight: 100

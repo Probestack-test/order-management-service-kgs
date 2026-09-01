@@ -1,0 +1,23 @@
+name: Deploy Kong Dev
+
+on:
+  workflow_dispatch:
+  
+  push:
+    branches: 
+      - "feature-dev"
+jobs:
+  deploy:
+    uses: ForgeCrux/pipeline-template/.github/workflows/kong.yaml@main
+    permissions:
+      contents: read
+      id-token: write
+    with:
+      environment: dev
+      kong_config_path: kong/dev/kong.yaml
+      control_plane_name: serverless-api-gateway-demo
+      validate_only: false
+      branch_name: ${{ github.ref_name }}
+      branch_tag: "release"
+    secrets:
+      konnect_token: 'kpat_65DQS60FLIzYl4AtWb2osrdAJuktPnJSe0wgBLd2jY7fxzeAA'

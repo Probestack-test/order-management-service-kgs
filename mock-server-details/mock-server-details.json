@@ -1,0 +1,118 @@
+{
+  "microserviceId": "6a9694291fd5203d92671e1f",
+  "mocks": [
+    {
+      "id": "d604056c-6e3d-421d-aaba-4c1646c4cbef",
+      "microserviceId": "6a9694291fd5203d92671e1f",
+      "specMetadataId": "6a96945340e8243f64aac010",
+      "apiSpecName": "Order Management Service",
+      "name": "mock-order-management-service",
+      "mockServiceName": "mock-order-management-service",
+      "mockServerUrl": "https://forgesphere.probestack.io/mock-api/v1/api/mocks/mock-e96a74b9",
+      "responseLatencyMs": 0,
+      "mockUrl": "mock-e96a74b9",
+      "isPrivate": true,
+      "delayMs": 0,
+      "requestCount": 5,
+      "createdAt": "2026-09-01T09:01:18.999Z",
+      "updatedAt": "2026-09-01T09:01:22.104Z",
+      "endpoints": [
+        {
+          "id": "9b157cce-5cd5-4e18-85c1-93b475dc08d8",
+          "mockId": "d604056c-6e3d-421d-aaba-4c1646c4cbef",
+          "path": "/orders",
+          "method": "GET",
+          "responseStatus": 200,
+          "responseHeaders": {
+            "Content-Type": "application/json"
+          },
+          "responseBody": "{\"page\":1,\"size\":20,\"totalElements\":87,\"totalPages\":5,\"content\":[{\"id\":\"d4c3b2a1\",\"orderNumber\":\"ORD-2026-0001\",\"customerId\":\"cust-88213\",\"status\":\"CONFIRMED\",\"currency\":\"USD\",\"totalAmount\":149.97,\"items\":[{\"sku\":\"SKU-12345\",\"productName\":\"Wireless Mouse\",\"quantity\":3,\"unitPrice\":49.99}],\"deliveryAddress\":\"123 Main Street, New York, NY 10001\",\"notes\":\"Leave at the front desk\",\"placedAt\":\"2026-08-12T10:00:00Z\",\"updatedAt\":\"2026-08-12T10:00:00Z\"}]}",
+          "delayMs": 0,
+          "isActive": true,
+          "requestBodySample": null,
+          "validationMode": "NONE",
+          "validationSchema": null,
+          "validateMethod": true,
+          "createdAt": "2026-09-01T09:01:19.075Z",
+          "updatedAt": "2026-09-01T09:01:19.076Z"
+        },
+        {
+          "id": "886e08aa-eeb2-4138-8838-c860864edf37",
+          "mockId": "d604056c-6e3d-421d-aaba-4c1646c4cbef",
+          "path": "/orders",
+          "method": "POST",
+          "responseStatus": 201,
+          "responseHeaders": {
+            "Content-Type": "application/json"
+          },
+          "responseBody": "{\"id\":\"d4c3b2a1\",\"orderNumber\":\"ORD-2026-0001\",\"customerId\":\"cust-88213\",\"status\":\"CONFIRMED\",\"currency\":\"USD\",\"totalAmount\":149.97,\"items\":[{\"sku\":\"SKU-12345\",\"productName\":\"Wireless Mouse\",\"quantity\":3,\"unitPrice\":49.99}],\"deliveryAddress\":\"123 Main Street, New York, NY 10001\",\"notes\":\"Leave at the front desk\",\"placedAt\":\"2026-08-12T10:00:00Z\",\"updatedAt\":\"2026-08-12T10:00:00Z\"}",
+          "delayMs": 0,
+          "isActive": true,
+          "requestBodySample": "{\"customerId\":\"cust-88213\",\"items\":[{\"sku\":\"SKU-12345\",\"productName\":\"Wireless Mouse\",\"quantity\":3,\"unitPrice\":49.99}],\"deliveryAddress\":\"123 Main Street, New York, NY 10001\",\"notes\":\"Leave at the front desk\",\"currency\":\"USD\"}",
+          "validationMode": "NONE",
+          "validationSchema": null,
+          "validateMethod": true,
+          "createdAt": "2026-09-01T09:01:19.087Z",
+          "updatedAt": "2026-09-01T09:01:19.087Z"
+        },
+        {
+          "id": "ff895156-d3e7-4492-9100-627d36361247",
+          "mockId": "d604056c-6e3d-421d-aaba-4c1646c4cbef",
+          "path": "/orders/{orderId}",
+          "method": "DELETE",
+          "responseStatus": 204,
+          "responseHeaders": {
+            "Content-Type": "application/json"
+          },
+          "responseBody": "{}",
+          "delayMs": 0,
+          "isActive": true,
+          "requestBodySample": null,
+          "validationMode": "NONE",
+          "validationSchema": null,
+          "validateMethod": true,
+          "createdAt": "2026-09-01T09:01:19.117Z",
+          "updatedAt": "2026-09-01T09:01:19.118Z"
+        },
+        {
+          "id": "e3039490-bebe-463c-9cda-a8583a26f5e9",
+          "mockId": "d604056c-6e3d-421d-aaba-4c1646c4cbef",
+          "path": "/orders/{orderId}",
+          "method": "GET",
+          "responseStatus": 200,
+          "responseHeaders": {
+            "Content-Type": "application/json"
+          },
+          "responseBody": "{\"id\":\"d4c3b2a1\",\"orderNumber\":\"ORD-2026-0001\",\"customerId\":\"cust-88213\",\"status\":\"CONFIRMED\",\"currency\":\"USD\",\"totalAmount\":149.97,\"items\":[{\"sku\":\"SKU-12345\",\"productName\":\"Wireless Mouse\",\"quantity\":3,\"unitPrice\":49.99}],\"deliveryAddress\":\"123 Main Street, New York, NY 10001\",\"notes\":\"Leave at the front desk\",\"placedAt\":\"2026-08-12T10:00:00Z\",\"updatedAt\":\"2026-08-12T10:00:00Z\"}",
+          "delayMs": 0,
+          "isActive": true,
+          "requestBodySample": null,
+          "validationMode": "NONE",
+          "validationSchema": null,
+          "validateMethod": true,
+          "createdAt": "2026-09-01T09:01:19.097Z",
+          "updatedAt": "2026-09-01T09:01:19.097Z"
+        },
+        {
+          "id": "f4146b9f-5a8f-4241-9463-507f7dfe3749",
+          "mockId": "d604056c-6e3d-421d-aaba-4c1646c4cbef",
+          "path": "/orders/{orderId}",
+          "method": "PUT",
+          "responseStatus": 200,
+          "responseHeaders": {
+            "Content-Type": "application/json"
+          },
+          "responseBody": "{\"id\":\"d4c3b2a1\",\"orderNumber\":\"ORD-2026-0001\",\"customerId\":\"cust-88213\",\"status\":\"CONFIRMED\",\"currency\":\"USD\",\"totalAmount\":149.97,\"items\":[{\"sku\":\"SKU-12345\",\"productName\":\"Wireless Mouse\",\"quantity\":3,\"unitPrice\":49.99}],\"deliveryAddress\":\"123 Main Street, New York, NY 10001\",\"notes\":\"Leave at the front desk\",\"placedAt\":\"2026-08-12T10:00:00Z\",\"updatedAt\":\"2026-08-12T10:00:00Z\"}",
+          "delayMs": 0,
+          "isActive": true,
+          "requestBodySample": "{\"deliveryAddress\":\"456 Park Avenue, New York, NY 10022\",\"notes\":\"Ring the doorbell twice\"}",
+          "validationMode": "NONE",
+          "validationSchema": null,
+          "validateMethod": true,
+          "createdAt": "2026-09-01T09:01:19.106Z",
+          "updatedAt": "2026-09-01T09:01:19.107Z"
+        }
+      ]
+    }
+  ]
+}
